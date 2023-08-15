@@ -74,4 +74,17 @@ if let actualAnswer = surveyAnswer {
     print("El string \(surveyAnswer) es nil")
 }
 
+let possibleString : String? = "Un string opcional"
+let forcedString : String = possibleString!
+let assummedString : String! = "Un string unwrapped de orma iimplicita a partir de un opcional"
+let implicitString : String = assummedString
 
+if assummedString != nil {
+    print(assummedString)
+}
+
+if let definitiveString = assummedString {
+    print(definitiveString)
+}
+
+print(assummedString)
