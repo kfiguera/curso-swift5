@@ -55,9 +55,23 @@ var surveyAnswer: String?
 surveyAnswer = "42"
 /*
 Force unwrapping = si hay o no hay valor
-*/1
+*/
 if convertedAge != nil {
     print("la edad del usuario no es nula \(convertedAge!)")
 }else{
     print("la Edad del usuario es nula")
 }
+
+/**
+ * OPTIONAL BINDING
+ */
+
+if let actualAnswer = surveyAnswer {
+    // Al llegar aqui surveyAnswer != nil
+    print("El string \(surveyAnswer) tiene el valor \(actualAnswer)")
+}else {
+    // Al llegar aqui surveyAnswer = nil
+    print("El string \(surveyAnswer) es nil")
+}
+
+
